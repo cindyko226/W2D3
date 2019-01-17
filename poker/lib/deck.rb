@@ -1,7 +1,11 @@
 require_relative "card"
 
 class Deck
-    SUITS = [:heart, :diamond, :club, :spade].freeze 
+    
+
+    #shuffle
+    #deal
+    #receive cards
     attr_reader :cards 
     def initialize
         @cards = []
@@ -9,7 +13,7 @@ class Deck
     end
 
     def populate
-        SUITS.each do |suit|
+        Card::SUITS.each do |suit|
             (1..13).each do |rank|
                 self.cards << Card.new(rank, suit)
             end
